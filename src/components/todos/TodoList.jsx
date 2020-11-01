@@ -9,7 +9,7 @@ const TodoList = () => {
     const toggleTodo = todoId => dispatch(toggleTodoAction(todoId))
     const deleteTodo = todoId => dispatch(deleteTodoAction(todoId))
 
-    return<>
+    return <>
         <div>
             { todos && todos.length === 0 && (
                 <p className = "alert alert-info">No Todos at the moment</p>
@@ -17,6 +17,7 @@ const TodoList = () => {
             { todos &&
             todos.map(todo => (
                 <div key = { todo.id } className="row mb-1">
+                    
                     <div className = "col-sm-2">
                         <input
                             type="checkbox"
@@ -31,8 +32,10 @@ const TodoList = () => {
                             X
                         </button>
                     </div>
+
+                </div>
             ))}
-        </div>
+        </div>        
     </>
 }
 export default TodoList

@@ -13,7 +13,7 @@ const TodoInput = () => {
             name: todo,
             complete: false
         }
-        addTodoAction(newTodo)
+        addTodo(newTodo)
         setTodo("")
     }
     const handleChange = e => {
